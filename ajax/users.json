@@ -1,0 +1,22 @@
+[
+    {
+        "firstName":"Manzoor",
+        "lastName":"Hussain",
+        "email": "mughal@gmail.com"
+    },
+    {
+        "firstName":"Sameed",
+        "lastName":"Khan",
+        "email": "khan@gmail.com"
+    },
+    {
+        "firstName": "Muddssir",
+        "lastName":"Malik",
+        "email":"malik@gmail.com"
+    },
+    {
+        "firstName":"Durul",
+        "lastName":"Huda",
+        "email":"huda@gmail.com"
+    }
+]

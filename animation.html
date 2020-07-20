@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Animation in jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   
+    <style>
+           header{
+            background: #333333;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000000  solid;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .myClass{
+            background: red;
+            color: blue;
+        }
+        #box{
+            background: #333333;
+            width: 500px;
+            height: 90px;
+            padding: 40px;
+            text-align: center;
+        }
+        #box2{
+            background: #333333;
+            width: 500px;
+            height: 90px;
+            padding: 40px;
+            text-align: center;
+        }
+        #box3{
+            background: red;
+            width: 100px;
+            height: 100px;
+        
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    
+        <h1>jQuery Crash Course | Animation and Effects</h1>
+        
+    </header>
+    <div id="container">
+        <button id="btnFadeOut">Fade Out</button>
+        <button id="btnFadeIn">Fade In</button>
+        <button id="btnFadeTog">Fade Toggle</button>
+        <div id="box">
+            <h1 >Hello World</h1>
+        </div>
+       <hr>
+       <button id="btnSlidUp">Slide Up</button>
+       <button id="btnSlideDown">Slide Down</button>
+       <button id="btnSlideTog">Slide Toggle</button>
+        <br>
+
+        <div id="box2">
+            <h1 >Learning Programming</h1>
+        </div>
+
+        <button id="btnMoveLeft">Move Left</button>
+        <button id="btnMoveRight">Move Right</button>
+        <button id="btnMoveAround">Move Around</button>
+        <div id="box3">
+            
+        </div>
+    </div>
+
+ 
+    <br>
+  
+   
+    <script>
+     
+        $(document).ready(function name(params) {
+            $('#btnFadeOut').click(function name(params) {
+                $('#box').fadeOut(function name(params) {
+                    $('#btnFadeOut').text('Its Gone');
+                });
+            });
+            $('#btnFadeIn').click(function name(params) {
+                $('#box').fadeIn(function name(params) {
+                    $('#btnFadeIn').text('Its Back');
+                });
+            })
+            $('#btnFadeTog').click(function name(params) {
+                $('#box').fadeToggle(function name(params) {
+                    $('#btnFadeTog').text('Its Toggled');
+                });
+            })
+
+            $('#btnSlidUp').click(function name(params) {
+                $('#box2').slideUp(3000,function name(params) {
+                    $('#btnSlidUp').text('Slided Up');
+                });
+            });
+            $('#btnSlideDown').click(function name(params) {
+                $('#box2').slideDown(3000,function name(params) {
+                    $('#btnSlideDown').text('Slided Down');
+                });
+            })
+            $('#btnSlideTog').click(function name(params) {
+                $('#box2').slideToggle(3000,function name(params) {
+                    $('#btnSlideTog').text('Its Toggled');
+                });
+            })
+
+
+            $('#btnMoveRight').click(function () {
+              
+                $('#box3').animate({
+                    left: 500,
+                    
+                
+                })
+            })
+            $('#btnMoveLeft').click(function () {
+              
+              $('#box3').animate({
+                  left:0
+              })
+          })
+
+          $('#btnMoveAround').click(function () {
+              
+              var box = $('#box3');
+              box.animate({
+                  left:300
+              })
+              box.animate({
+               top:300
+              })
+              box.animate({
+                  left:0,
+                  top:300
+              })
+              box.animate({
+                  left:0,
+                  top:0
+              })
+          })
+        }); 
+
+
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>DOM in jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   
+    <style>
+           header{
+            background: #333333;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000000  solid;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .myClass{
+            background: red;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    
+        <h1>jQuery Crash Course | DOM Manipulation</h1>
+        
+    </header>
+    <div id="container">
+        <button>Button 1</button>
+        
+        <p class="parag1">This is Paragraph One</p>
+        <p class="parag2">This is Paragraph Two</p>
+        <input type="text" id="newItem">
+    </div>
+    <div id="myDiv">
+        <ul>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+            <li>Item </li>
+            </li>
+            
+        </ul>
+
+    </div>
+    
+    <ol id="users"></ol>
+   <a href="http://google.com"></a>
+   
+    <script>
+     
+        $(document).ready(function name(params) {
+            $('.parag1').css({color: 'red',background:'black'});
+            $('.parag2').addClass('myClass');
+            $('.parag2').addClass('myClass');
+            // $('#myDiv').text('Hello World!');
+            // $('#myDiv').html('<h3> Hello World</h3>');
+            $('ul').append('<li>Append Item </li>');
+            $('ul').prepend('<li>Prepend Item </li>');
+            $('ul').before('<h3>Hello</h3>');
+            $('ul').after('<h3>World</h3>');
+            $('a').attr('target','_blank');
+            alert($('a').attr('href'));
+            $('a').removeAttr('target');
+            
+
+            $('#newItem').keyup(function name(e) {
+                var code = e.which;
+                if (code == 13) {
+                    e.preventDefault();
+                    $('ul').append('<li>' + e.target.value + '</li>');
+                }
+            });
+            var myArr = ["Manzoor","Durul","Sameed","Izhar","Toheed","Muddssir"];
+            $.each(myArr,function name(i,val) {
+                $('#users').append('<li>' + val + '</li>')
+            });
+
+        }); 
+
+
+     
+    </script>
+</body>
+</html>
